@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/contato_icon.png" type="image/x-icon">
+    <title>Home - Anna Bella</title>
+
+    <style>
+
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+         body{
+            background: #d2d2c1 url("imagens/fundo.png")
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+            width: 900px;
+            height: fit-content;
+            
+            background-color: #c5c5b2;
+
+            font-size: 1.5em;
+
+            border-radius: 3px;
+            
+        }
+
+        span{
+            color: #4b566a;;
+            padding: 10px;
+        }
+        a{
+            color: #4b566a;
+            text-decoration: none;
+        }
+
+       
+
+        h1{
+            font-size: 1.3em;
+            color: #828271;
+
+        }
+
+        p{
+         text-align: justify;   
+        }
+
+        .direitos>p{
+            text-align: center;
+        }
+
+        .principal{
+            background-color: #e8e8d5;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+
+            width: 870px;
+
+            border-radius: 2px;
+        }
+
+        .direitos{
+            /* background-color: green; */
+            width: 900px;
+            font-weight: bolder;
+            
+
+        }
+
+        .teste{
+           display: flex;
+           justify-content: center;
+        }
+
+
+        /*Formulário*/
+
+        form{
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        input, textarea{
+            margin-bottom: 20px;
+
+            
+        }
+    </style>
+
+    <script>
+
+function Enviar(){
+
+    let
+        
+        email = document.getElementById("emailid");
+        nome = document.getElementById("nomeid");
+        assunto = document.getElementById("assuntoid");
+        area = document.getElementById("areaid");
+
+        if(nome.value != "" && email.value !="" && assunto.value != "" ){
+            alert(`Olá ${nome.value} agradecemos o seu contato e logo em breve retornaremos`);
+
+        }
+
+        else{
+            alert("Por favor, preencha os campos corretamente")
+        }
+}
+    </script>
+</head>
+<body>
+
+
+    <div class="teste">
+        <div class="teste2">
+        <header>
+            <img src="imagens/capa.png" ealt="Anna.jpeg" width="900px">
+
+            <nav>
+                <span><a href="/3p_course/index.html">Home</a></span>
+                <span>|</span>
+                <span><a href="/3p_course/biografia.html">Biografia</a></span>
+                <span>|</span>
+                <span><a href="/3p_course/campanhas.html">Campanhas publicitárias</a></span>
+                <span>|</span>
+                <span><a href="/3p_course/contatos.html">Contato</a></span>
+            </nav>
+        </header>
+
+        <main>
+            <div class="principal">
+                <h1>Contate-nos</h1>
+
+            <section class="formulario">
+                <form name="Ana_B">
+
+                    <label for="nome" >Nome</label>
+                    <input type="text" id="nomeid" requerid="requerid" name="nome">
+
+                    <label for="Email" >Email</label>
+                    <input type="email" id="emailid" requerid="requerid" name="email">
+                    
+                    <label for="Assunto">Assunto</label>
+                    <input type="text" id="assuntoid" requeired="requeired" name="assunto">
+
+                <textarea name="area" id="areaid" cols="30" rows="10"></textarea>
+
+                
+                    <input type="submit" class="enviar" onclick="Enviar();" value="Enviar">
+                </form>
+            </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="direitos">
+                <p>Todos os direitos reservados</p>
+            </div>
+        </footer>
+        </div>
+    </div>
+
+</body>
+</html>
